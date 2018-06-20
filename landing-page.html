@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+			
+	
+	<link rel="pingback" href="http://www.adelaideanliving.com.au/wp/xmlrpc.php" />
+
+		<!--[if lt IE 9]>
+	<script src="http://www.adelaideanliving.com.au/app/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<title>YOUR LIFE. YOUR CITY. YOUR HOME. - Adelaidean</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.adelaideanliving.com.au/landing-page/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="YOUR LIFE. YOUR CITY. YOUR HOME. - Adelaidean" />
+<meta property="og:url" content="http://www.adelaideanliving.com.au/landing-page/" />
+<meta property="og:site_name" content="Adelaidean" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="YOUR LIFE. YOUR CITY. YOUR HOME. - Adelaidean" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Adelaidean &raquo; Feed" href="http://www.adelaideanliving.com.au/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adelaidean &raquo; Comments Feed" href="http://www.adelaideanliving.com.au/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.adelaideanliving.com.au\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="Divi v.3.0.29" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='scripts-and-styles-1-css'  href='http://www.adelaideanliving.com.au/app/uploads/assets/animate.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='http://www.adelaideanliving.com.au/app/themes/Divi/style.css?ver=3.0.29' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='http://www.adelaideanliving.com.au/app/themes/Divi/epanel/shortcodes/css/shortcodes.css?ver=3.0.29' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='http://www.adelaideanliving.com.au/app/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css?ver=3.0.29' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/styles/magnific_popup.css?ver=3.0.29' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCkQvbI210XSAosPeG4MYdtAG4AgZdy-VM&#038;ver=4.5.3'></script>
+<link rel='https://api.w.org/' href='http://www.adelaideanliving.com.au/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.adelaideanliving.com.au/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.adelaideanliving.com.au/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.5.3" />
+<link rel='shortlink' href='http://www.adelaideanliving.com.au/?p=6' />
+<link rel="alternate" type="application/json+oembed" href="http://www.adelaideanliving.com.au/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adelaideanliving.com.au%2Flanding-page%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.adelaideanliving.com.au/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adelaideanliving.com.au%2Flanding-page%2F&#038;format=xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />		<style id="theme-customizer-css">
+													.woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce-message, .woocommerce-error, .woocommerce-info { background: #ffffff !important; }
+			#et_search_icon:hover, .mobile_menu_bar:before, .mobile_menu_bar:after, .et_toggle_slide_menu:after, .et-social-icon a:hover, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price, .et_pb_member_social_links a:hover, .woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before, .et_pb_widget li a:hover, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .nav-single a, .posted_in a { color: #ffffff; }
+			.et_pb_contact_submit, .et_password_protected_form .et_submit_button, .et_pb_bg_layout_light .et_pb_newsletter_button, .comment-reply-link, .form-submit .et_pb_button, .et_pb_bg_layout_light .et_pb_promo_button, .et_pb_bg_layout_light .et_pb_more_button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button { color: #ffffff; }
+			.footer-widget h4 { color: #ffffff; }
+			.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li:before, .et_pb_pricing li:before, blockquote { border-color: #ffffff; }
+			.et_pb_counter_amount, .et_pb_featured_table .et_pb_pricing_heading, .et_quote_content, .et_link_content, .et_audio_content, .et_pb_post_slider.et_pb_bg_layout_dark, .et_slide_in_menu_container { background-color: #ffffff; }
+									a { color: #ffffff; }
+							#main-header, #main-header .nav li ul, .et-search-form, #main-header .et_mobile_menu { background-color: #003c4d; }
+											#top-header, #et-secondary-nav li ul { background-color: #ffffff; }
+													.et_header_style_centered .mobile_nav .select_page, .et_header_style_split .mobile_nav .select_page, .et_nav_text_color_light #top-menu > li > a, .et_nav_text_color_dark #top-menu > li > a, #top-menu a, .et_mobile_menu li a, .et_nav_text_color_light .et_mobile_menu li a, .et_nav_text_color_dark .et_mobile_menu li a, #et_search_icon:before, .et_search_form_container input, span.et_close_search_field:after, #et-top-navigation .et-cart-info { color: rgba(255,255,255,0.6); }
+			.et_search_form_container input::-moz-placeholder { color: rgba(255,255,255,0.6); }
+			.et_search_form_container input::-webkit-input-placeholder { color: rgba(255,255,255,0.6); }
+			.et_search_form_container input:-ms-input-placeholder { color: rgba(255,255,255,0.6); }
+								
+		
+													#main-footer .footer-widget h4 { color: #ffffff; }
+							.footer-widget li:before { border-color: #ffffff; }
+																
+		
+																														
+		@media only screen and ( min-width: 981px ) {
+																																											.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container, .et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container { height: 11.88px; }
+																.et-fixed-header#top-header, .et-fixed-header#top-header #et-secondary-nav li ul { background-color: #ffffff; }
+																.et-fixed-header #top-menu a, .et-fixed-header #et_search_icon:before, .et-fixed-header #et_top_search .et-search-form input, .et-fixed-header .et_search_form_container input, .et-fixed-header .et_close_search_field:after, .et-fixed-header #et-top-navigation .et-cart-info { color: rgba(255,255,255,0.6) !important; }
+				.et-fixed-header .et_search_form_container input::-moz-placeholder { color: rgba(255,255,255,0.6) !important; }
+				.et-fixed-header .et_search_form_container input::-webkit-input-placeholder { color: rgba(255,255,255,0.6) !important; }
+				.et-fixed-header .et_search_form_container input:-ms-input-placeholder { color: rgba(255,255,255,0.6) !important; }
+									
+					}
+					@media only screen and ( min-width: 1350px) {
+				.et_pb_row { padding: 27px 0; }
+				.et_pb_section { padding: 54px 0; }
+				.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper { padding-top: 81px; }
+				.et_pb_section.et_pb_section_first { padding-top: inherit; }
+				.et_pb_fullwidth_section { padding: 0; }
+			}
+		
+		@media only screen and ( max-width: 980px ) {
+																				}
+		@media only screen and ( max-width: 767px ) {
+														}
+	</style>
+
+	
+	
+	
+	<style id="module-customizer-css">
+			</style>
+
+	<link rel="shortcut icon" href="http://www.adelaideanliving.com.au/app/uploads/2016/12/icon.png" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #003c4d; background-image: url('http://www.adelaideanliving.com.au/app/uploads/2017/04/backgroundPattern-fs8.png'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNRT395');</script>
+<!-- End Google Tag Manager --><link rel="icon" href="http://www.adelaideanliving.com.au/app/uploads/2016/12/icon.png" sizes="32x32" />
+<link rel="icon" href="http://www.adelaideanliving.com.au/app/uploads/2016/12/icon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://www.adelaideanliving.com.au/app/uploads/2016/12/icon.png" />
+<meta name="msapplication-TileImage" content="http://www.adelaideanliving.com.au/app/uploads/2016/12/icon.png" />
+<style type="text/css" id="et-custom-css">
+#mapSection { overflow: hidden; } 
+
+	
+@font-face {
+	font-family: 'Gotham Rounded';
+	src: url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Light.eot');
+	src: url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+		url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Light.woff') format('woff'),
+		url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Rounded Book';
+	src: url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Book.eot');
+	src: url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+		url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Book.woff') format('woff'),
+		url('http://www.adelaideanliving.com.au/app/uploads/assets/GothamRounded-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	font-family: 'Gotham Rounded';	
+}
+body p {
+	font-family: 'Gotham Rounded';
+}
+.footer {
+	font-family: 'Gotham Rounded';	
+}
+
+#footer-bottom {
+    display: none !important;
+}
+.footer-contact ul{
+	list-style: none;
+}
+.footer-contact ul li{
+	font-weight: 600;
+	color: #fff;
+}
+#footer .footer-tablet .et_pb_column_1_4 {
+	width: 25% !important;
+}
+#footer .footer-tablet .et_pb_column_1_2 {
+	width: 50% !important;
+}
+.text-center{
+	text-align: center;
+}
+.landing-header{
+	padding: 0;
+}
+.landing-header .landing-bg-img{
+	text-align: center;
+	height: 123px;
+}
+.landing-header .landing-bg-img a{
+	text-align: center;
+    z-index: 999;
+    position: relative;
+    top: 0;
+	display: inline-block;
+    height: 246px;
+    width: auto;
+}
+.landing-header .landing-bg-img a:
+.landing-header .landing-bg-img a img{
+	padding: 18% 5% 9%;
+}
+.landing-header .et_pb_fullwidth_header_container .header-content-container .header-content{
+	margin: 0 auto;
+	padding: 0;    
+    }
+#landing-banner .et_pb_slide_content .one_half{
+  padding: 12em 0.9em 6em;
+  background: rgba(0, 57, 69, 0.60);
+  opacity: 1 !important;
+}
+#landing-banner .et_pb_slide_content .one_half h2, #landing-banner .et_pb_slide_content .one_half p{
+	color: #fff;
+	line-height: 1.5em;
+	text-align: left;
+	font-size: 28px;
+}
+#landing-banner .et_pb_slide_content .one_half h2{
+	font-size: 45px;
+}
+
+
+.et_pb_section .et_pb_row .et_pb_column .premiun-section p{
+	padding-bottom: 0.4em;
+}
+.et_pb_section .et_pb_row .et_pb_column .text-below-icons p{
+	font-size: 19.62px;
+}
+.et_pb_section .et_pb_row .et_pb_column .text-yourlife p, .bg-footer .et_pb_row .et_pb_column .landing-contact p, .footer-logos{
+	text-align: center !important;
+}
+
+.et_pb_section .et_pb_row .et_pb_column .text-yourlife p{
+	font-size: 18.94px;
+	font-weight: bold;
+}
+.bg-footer{
+	background-size: 45%;
+    background-repeat: repeat;
+}
+
+.bg-footer .et_pb_row .et_pb_column  .landing-contact{
+ 	padding: 10% 0 0 0;
+}
+
+.icon-row .et_pb_column .et_pb_module img{
+	
+}
+.text-each-of p{
+	font-size: 19.62px;
+}
+
+.font-video-page p{
+	font-size: 25px;
+    color: #003945;
+}
+#vrWrapper {
+	
+	width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+#vrWrapper iframe {
+	position: absolute;
+    top: 0;	
+}
+.vrWrapper { position: relative; }
+
+.iconrotator {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    pointer-events: none;
+
+}
+.margin-10{
+	margin: 10px;
+}
+.margin-top-20{
+	margin-top: 20px;
+}
+li.current-menu-item > a {
+    color: #ffffff !important;
+	font-weight: 900;
+}
+#img-grid .et_pb_gallery_items{
+	text-align: center !important;
+}
+#img-grid .et_pb_gallery_item{
+	display: inline-block !important;
+	float: none;
+	margin:4%;
+	padding-top: 60px;
+	position: relative;
+}
+#img-grid .et_pb_gallery_item img{
+	border: 2px solid rgba(38, 44, 58, 0.83);
+} 
+#img-grid .et_pb_gallery_item .et_pb_gallery_title{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	font-weight: bold;
+}
+#page-container .f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: -60px;
+    width: 100%;
+}
+li:last-child a{
+    background: #fff !important;
+    color: #11333e !important ;
+    border-radius: 10px;
+    padding: 14px 40px !important;
+    border: none;
+	border-bottom: 5px solid #11111e;
+}
+
+.et_pb_text .two_third p:last-of-type{
+	padding-bottom:1em !important;
+}
+.et_pb_text  twp_third{
+	width: 290px;
+}
+.two_third span{
+	    color: #fff;
+    font-weight: 600;
+}
+
+#logo{
+	display: initial;
+    float: none;
+    max-height: 54%;
+    margin-bottom: 10px;
+	position:absolute;
+	top: 23%;
+	left:4%
+}
+
+
+@media(min-width:1050px){
+.logo-shrink{
+	transform: scale(0.8,0.8) !important;
+    position: absolute !important;
+    top: 36% !important;
+    left: 4% !important;
+	
+}
+.logo_container a{
+	display: inline-block;
+    height: 160px;
+    width: 192px;
+    background: url(http://www.adelaideanliving.com.au/app/uploads/2017/04/logoBG.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: 999;
+    position: relative;
+    top: -55px;
+}
+}
+.et-pb-controllers a{
+	width:11px;
+	height:11px;
+}
+.et-pb-arrow-prev, .et-pb-arrow-next{
+color: rgba(255, 255, 255, 0.37) !important;
+    font-size: 64px;
+}
+.validation_error{
+	background: #d9534f;
+    border-radius: 5px;
+    margin-left: 22px;
+    padding: 2px 9px;
+    text-align: center;
+	color: #fff;
+}
+a {
+	font-weight: 900;	
+}
+
+.footer .bold {
+	font-weight: 600;
+	margin-right: 5px;	
+}
+
+.footer .one_third img {
+	padding-right: 10px;
+}
+
+.footer .img-vertical-align {
+	margin-top: 19px;	
+}
+
+.footer .right-column .one_half {	
+	margin-right: 0px;
+	padding: 10px;
+}
+	
+.et_header_style_split #et-top-navigation nav > ul > li > a {
+	font-family: 'Gotham Rounded';
+}
+
+.cta p strong {		
+	font-family: 'Gotham Rounded';
+    font-size: 34px;
+    font-weight: 100;
+    letter-spacing: 12px;
+    line-height: 1.6;
+}	
+
+.cta p {
+	font-family: 'Gotham Rounded';
+	font-size: 18px;
+}
+
+.hero .et_pb_slide {
+	height: calc(100vh - 140px);
+	min-height: 560px;
+}
+
+.et_pb_slide_content .one_half {	
+	font-family: 'Gotham Rounded';
+	padding: 20px;
+	background-color: rgba(0,23, 35, .85);	
+	font-size: 14px;
+}
+
+.et_pb_slide_content .one_half:before  {	
+	content: "x";
+    position: absolute;
+    right: 20px;
+    top: 20px;	
+	cursor: pointer;
+}
+
+.et_pb_slide_description {
+    padding: 8% 8% !important;
+}
+
+#mapOuter {
+	-ms-transform-origin: 0px 0px 0px;
+	    transform-origin: 0px 0px 0px;	
+	width: 100vw;	
+}
+
+#mapInner {
+	
+}
+
+#mapImg  {
+	max-width: inherit;	
+}
+
+input {
+	font-family: 'Gotham Rounded';	
+}
+	
+.marker {
+	position: absolute;	
+	pointer-events: none;
+}
+.marker .label {
+	position: absolute;
+	color:  rgba(0,23, 35, .85);
+	font-family: 'Gotham Rounded';
+	font-size: 18px;
+	width: 200px;
+	-ms-transform: translate(-50%, -20px);
+	    transform: translate(-50%, -20px);	
+	text-align: center;
+	opacity: 0;
+	transition: all 0.75s ease;
+	background-color: #fff;
+	padding: 10px;
+	border: 3px solid  rgba(0,23, 35, .85);
+}
+.marker .line {
+	position: absolute;
+	background: white;
+	width: 2px;	
+	height: 0px;
+    -ms-transform: translate(-50%, -0px);
+        transform: translate(-50%, -0px);
+	transition: all 0.75s ease;
+}
+.marker .circle {
+	pointer-events: all;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	display: none;
+	background: white;
+	border-radius: 40px;
+	-ms-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	-ms-transform-origin: 50px 0px 60px;
+	    transform-origin: 50px 0px 60px;	
+	transition: all 0.75s cubic-bezier(0.175, 0.885, 0.500, 1.625);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+.marker.active .label {
+	opacity: 1;
+	-ms-transform: translate(-50%, -180px);
+	    transform: translate(-50%, -180px);
+}
+.marker.active .circle {
+	-ms-transform: scale(1.6);
+	    transform: scale(1.6);
+	box-shadow: 13px 13px 26px 0px rgba(0,0,0,0.75);
+}
+.marker.active .line {
+	height: 150px;
+	-ms-transform: translate(-50%, -137px);
+	    transform: translate(-50%, -137px);
+}
+.marker.active .line.short {
+  -ms-transform: translate(-50%, -114px);
+      transform: translate(-50%, -114px);
+}
+
+
+.clickToRegister {
+	cursor: pointer;	
+}
+
+.select_page { visibility: hidden; }
+
+	
+#page-container #main-header {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+	margin-top: 60px;
+	background:url(http://www.adelaideanliving.com.au/app/uploads/2017/04/menuBG.png) no-repeat center center; background-size:cover;
+}
+
+.centered-inline-logo-wrap {
+	margin-left: 77px !important;
+	margin-right: 77px  !important;	
+	width: 115px;
+	-ms-transform: translateX(9px);
+	    transform: translateX(9px);
+}
+
+.centered-inline-logo-wrap .logo_container {
+  -ms-transform: scale(2.8);
+      transform: scale(2.8);
+  margin-top: -12px;  
+}
+
+.centered-inline-logo-wrap .logo_container a {
+	background: url(http://www.adelaideanliving.com.au/app/uploads/2017/04/logoBG.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.centered-inline-logo-wrap #logo {
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  position: absolute;
+  animation: none !important;
+  image-rendering: crisp-edges;
+}
+
+.centered-inline-logo-wrap .logo_container:before, .centered-inline-logo-wrap .logo_container:after {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 15px;
+	left: 0px;
+	width: 40%;
+	top: 70%;
+	max-width:300px;
+	background: transparent;
+	box-shadow: 0 15px 2px #000;
+	-ms-transform: rotate(-3deg);
+	    transform: rotate(-3deg);	
+	animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.centered-inline-logo-wrap .logo_container:after {
+	-ms-transform: rotate(3deg);
+	    transform: rotate(3deg);
+	right: 0px;
+	left: auto;
+}
+
+.ds-vertical-align { 
+    display: -ms-flexbox; 
+    display: flex; 
+    -ms-flex-direction: column; 
+        flex-direction: column; 
+    -ms-flex-pack: center; 
+        justify-content: center;	
+}
+
+.divi-vertical-align { 
+	display:-ms-flexbox; 
+	display: flex;
+	-ms-flex-pack:center;
+	    justify-content:center;
+	-ms-flex-align:center;
+	    align-items: center;
+}
+
+
+
+#top-menu {
+	white-space: nowrap;
+}
+
+#top-menu li {
+	
+    white-space: nowrap;
+}
+	
+@media (max-width: 1200px) {
+	
+  #top-menu li {
+    padding-right: 18px;
+    font-size: 12px !important;
+  }
+  
+  .centered-inline-logo-wrap {
+		margin-left: 44px !important;
+		margin-right: 44px !important;		
+	}
+  
+  .centered-inline-logo-wrap .logo_container {
+		-ms-transform: scale(2.3);
+		    transform: scale(2.3);
+		margin-top: -32px;
+  }
+  
+	.et_pb_slider .et_pb_container 	{
+		width: 100% !important;
+	}
+	.et_pb_slide_description {
+	    padding: 5% 8% !important;
+	}
+}
+
+@media (max-width: 980px) {
+	#page-container #main-header {
+		margin-top: 0px;
+	}
+	#page-container #main-header.f-nav 		
+   {
+		margin-top: 60px;
+	}
+	.et_header_style_split #logo {
+		max-height: 120px !important;
+  	    
+	} 
+	li:last-child a{
+		text-align:center;
+	}
+}
+
+
+#field_1_15	{
+	display: none;
+}
+
+section.contact .inner form .gfield:not(:first-child):nth-of-type(2) {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+.gfield_error .ginput_container_radio{
+	border: none !important;
+}
+.gfield_error .ginput_container .gfield_radio li{
+	border: 2px solid rgb(255, 98, 2);
+	border-radius: 10px;
+}
+#gform_1 .gfield_label {
+	display: none;
+}
+input[type=radio]:checked+label:before{
+    content: "\2714";
+    display: inline-block;
+}
+
+.gform_fields input[type=radio] {
+    display: none;
+}
+
+ul, li label {
+	list-style: none;
+	color: white;
+	font-family: 'Gotham Rounded';
+}
+
+.ginput_container_radio {
+	background: none !important;
+}
+
+.ginput_container_radio .gfield_radio label {
+    color: #11333e;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+	  font-weight: bold;
+		font-size: 13px;
+		text-align: center;
+}
+
+.gfield:not(:first-child) {
+    border: none;
+    /* background: #7ca1b7; */
+    border-radius: 8px;
+    height: 34px;
+}
+
+.gfield:not(:first-child) input, select, option {
+    border: none !important;
+    background: transparent !important;
+    border-radius: 8px;
+	width: 100%;	
+	color: #11333e !important;
+	font-family: 'Gotham Rounded';
+	padding: 10px !important;
+	height: 40px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.gfield:not(:first-child) option {
+	color: #000 !important;	
+}
+
+.gfield:not(:first-child) input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #11333e !important;
+}
+.gfield:not(:first-child) input::-moz-placeholder { /* Firefox 19+ */
+  color: #11333e !important;
+}
+.gfield:not(:first-child) input:-ms-input-placeholder { /* IE 10+ */
+  color: #11333e !important;
+}
+.gfield:not(:first-child) input:-moz-placeholder { /* Firefox 18- */
+  color: #11333e !important;
+}
+
+.ginput_container {
+	border-radius: 10px;
+	background: #7ca1b7;
+	margin: 5px;	
+	margin-top: 15px;	
+}
+
+.gform_footer.top_label {
+	text-align: center;
+}
+
+.gform_footer input[type=submit] {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #11333e;
+    padding: 14px 100px;
+    border: none;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-bottom: 5px solid #11111e;
+	transition: border-color .3s;
+}
+
+.gform_footer input[type=submit]:hover {
+	border-color: #b0b0b1;
+}
+
+.gfield {
+	position: relative;	
+}
+
+.gfield_description.validation_message {
+    position: absolute;
+    font-size: 10px;
+    z-index: 9999;
+    top: 87%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+}
+    
+li.gfield {  
+  list-style: none;
+}
+
+.gfield_error .ginput_container {
+	border: 2px solid rgb(255, 98, 2);
+}
+
+.gfield_description.validation_message {
+	display: none;
+}
+
+.et_pb_text ul, .et_pb_text li {
+	color: inherit;
+}
+
+.gfield.half {
+	width: 50%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.gfield.half-group {
+	width: 25%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.gform_footer{
+	clear: both;
+}
+
+.gfield_radio{
+
+}
+
+.gfield_radio {
+	padding: 0 !important;
+	background: none !important;
+}
+
+.gfield_radio li {
+	margin-left: 10px;
+	width: calc(50% - 5px);
+	display: inline-block;
+}
+
+.gfield_radio li:first-child {
+	margin-left: 0;
+margin-bottom: 10px;
+}
+
+.gfield_radio li input{
+	margin: 0;
+}
+
+@media (max-width: 450px) {
+	.gfield.half {
+		width: 100%;
+		float: none;
+	}
+
+	.gfield.half-group {
+		width: 100%;
+		float: none;
+	}
+
+	.footer-form .gfield_radio li {
+		margin: 0;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.cta p strong {
+		font-size: 30px;
+		letter-spacing: 3px;
+	}
+}
+@media(max-width: 767px){
+	.footer-contact{
+		text-align: center;
+		margin-bottom: 30px
+	}
+  #landing-form #gform_wrapper_1 #gform_1 .gform_footer input[type=submit]
+  {
+  	padding: 14px 50px;
+      font-size: 19px;
+  }
+
+	#landing-form #gform_wrapper_5 #gform_5 .gform_footer input[type=submit]
+  {
+  	padding: 14px 50px;
+      font-size: 19px;
+  }
+
+  .bg-footer .icon-row, .et_pb_section .et_pb_row .et_pb_column .premiun-section p img.phone-call-desktop{
+	display: none ;
+  }
+#contact-details .et_pb_row .et_pb_column .et_pb_module img.phone-call-desktop{
+	display: none;
+}
+
+}
+@media(min-width: 767px){
+	.et_pb_section .et_pb_row .et_pb_column .premiun-section p img.phone-call-mobile{
+	display: none !important;
+  } 
+}
+
+@media (max-width: 500px){
+  .gfield_radio li{
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .gfield_radio li.gchoice_1_1_0{
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    margin-left: 0;
+  }
+  .gfield.half {
+    width: 100%;
+    float: none;
+  }
+  .gfield.half-group {
+    width: 100%;
+    float: none;
+    margin-bottom: 50px;
+  }
+    #landing-banner .et_pb_slide_content .one_half h2{
+  font-size: 28px;
+  }
+  #landing-banner .et_pb_slide_content .one_half p{
+  font-size: 25px;
+  }
+}
+
+#contact-details{
+	padding: 15px 0 0 15px;
+}
+#contact-details .et_pb_row{
+	padding: 0;
+}
+
+#contact-details .et_pb_row .et_pb_column{
+	margin-bottom: 0;
+}
+
+@media (max-width:1150px) and (min-width: 980px) {
+.et_pb_section .et_pb_row .et_pb_column .premiun-section p{
+	font-size:21px;
+ }
+}
+@media (max-width:540px) and (min-width: 420px) {
+.et_pb_section .et_pb_row .et_pb_column .premiun-section p{
+	font-size:19px;
+ }
+}
+
+@media (max-width:419px) {
+.et_pb_section .et_pb_row .et_pb_column .premiun-section p{
+	font-size:14px;
+ }
+}
+
+
+#landing-form #gform_wrapper_5 #gform_5 .gform_body #gform_fields_5 .gfield .ginput_container_radio .gfield_radio label{
+	padding: 24px;
+	border-radius: 4px;
+    font-size: 21px;
+	font-weight: lighter;
+}
+
+#landing-form #gform_wrapper_5 #gform_5
+.gform_body .gform_fields .gfield .ginput_container{
+	border-radius: 4px;
+	backgroud-color: #6f9bb2;
+	color:#fff;
+}
+#landing-form #gform_wrapper_5 #gform_5
+.gform_body .gfield:not(:first-child) input{
+	background-color: #6f9bb2 !important;
+	color: #fff !important;
+	height: 72px;
+}
+#landing-form #gform_wrapper_5 #gform_5
+.gform_body .gfield:not(:first-child) input::placeholder{
+	color: #fff !important;
+}
+#landing-form #gform_wrapper_5 #gform_5
+.gform_body .gfield:not(:first-child) .ginput_container select, option{
+	color: #fff !important;
+	height: 72px;
+}
+#landing-form #gform_wrapper_5 #gform_5
+.gform_body .gfield.half{
+	margin-bottom: 49px;
+}
+
+#landing-form #gform_wrapper_5 #gform_5 .gform_footer input[type=submit]
+{
+
+	border-radius: 4px;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+#gform_5 .gfield_label {
+	display: none;
+}
+#field_5_15	{
+	display: none;
+}
+
+.pum-theme-1912 .pum-container, .pum-theme-lightbox .pum-container{
+	color: #fff !important;
+    background-color: rgba(84, 88, 88, 0.72);
+	border:0;
+}
+.pum-theme-1912 .pum-content + .pum-close, .pum-theme-lightbox .pum-content + .pum-close{
+	border:0;
+	background-color: #00000000;
+	box-shadow:0 0 0 #00000000;;
+
+}
+</style></head>
+<body class="page page-id-6 page-template page-template-template-landing page-template-template-landing-php custom-background et_pb_button_helper_class et_non_fixed_nav et_show_nav et_pb_gutter et_pb_gutters3 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_pb_footer_columns_1_2__1_4 et_header_style_left et_right_sidebar et_divi_theme unknown">
+	<div id="page-container">
+
+	
+	
+		<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="http://www.adelaideanliving.com.au/">
+						<img src="http://www.adelaideanliving.com.au/app/uploads/2017/04/adelaideanLogo.png" alt="Adelaidean" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+				<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://www.adelaideanliving.com.au/residences/">RESIDENCES</a></li>
+<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="http://www.adelaideanliving.com.au/penthouses/">PENTHOUSES</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-551"><a href="http://www.adelaideanliving.com.au/view/">VIEW</a></li>
+<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://www.adelaideanliving.com.au/location/">LOCATION</a></li>
+<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="http://www.adelaideanliving.com.au/video/">VIDEO</a></li>
+<li id="menu-item-684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"><a href="http://www.adelaideanliving.com.au/projects/">PROJECT</a></li>
+<li id="menu-item-1144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144"><a href="#contactus">REGISTER</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="http://www.adelaideanliving.com.au/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+
+		<div id="et-main-area">
+<div id="main-content">
+
+
+	<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+
+
+			
+				<article id="post-6" class="post-6 page type-page status-publish hentry">
+
+				
+					<h1 class="entry-title main_title">YOUR LIFE. YOUR CITY. YOUR HOME.</h1>
+				
+				
+					<div class="entry-content">
+										</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+			</div> <!-- #left-area -->
+
+				<div id="sidebar">
+		<div id="search-2" class="et_pb_widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.adelaideanliving.com.au/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div> <!-- end .et_pb_widget --><div id="recent-comments-2" class="et_pb_widget widget_recent_comments"><h4 class="widgettitle">Recent Comments</h4><ul id="recentcomments"></ul></div> <!-- end .et_pb_widget --><div id="archives-2" class="et_pb_widget widget_archive"><h4 class="widgettitle">Archives</h4>		<ul>
+				</ul>
+		</div> <!-- end .et_pb_widget --><div id="categories-2" class="et_pb_widget widget_categories"><h4 class="widgettitle">Categories</h4>		<ul>
+<li class="cat-item-none">No categories</li>		</ul>
+</div> <!-- end .et_pb_widget --><div id="meta-2" class="et_pb_widget widget_meta"><h4 class="widgettitle">Meta</h4>			<ul>
+						<li><a rel="nofollow" href="http://www.adelaideanliving.com.au/wp/wp-login.php">Log in</a></li>
+			<li><a href="http://www.adelaideanliving.com.au/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.adelaideanliving.com.au/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</div> <!-- end .et_pb_widget -->	</div> <!-- end #sidebar -->
+		</div> <!-- #content-area -->
+	</div> <!-- .container -->
+
+
+</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+									</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<style type="text/css" id="et-builder-page-custom-style">
+				 .et_pb_section { background-color: ; }
+			</style><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNRT395"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/frontend-builder-global-functions.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/uploads/assets/adelaideanJS.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/jquery.mobile.custom.min.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/js/custom.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/js/smoothscroll.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/jquery.fitvids.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/waypoints.min.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/jquery.magnific-popup.js?ver=3.0.29'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"http:\/\/www.adelaideanliving.com.au\/wp\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/www.adelaideanliving.com.au\/app\/themes\/Divi\/images","builder_images_uri":"http:\/\/www.adelaideanliving.com.au\/app\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"a2758e79d6","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"2569cd0f66","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"6","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/app/themes/Divi/includes/builder/scripts/frontend-builder-scripts.js?ver=3.0.29'></script>
+<script type='text/javascript' src='http://www.adelaideanliving.com.au/wp/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8ebd6e5a16","applicationID":"27658822","transactionName":"MlNXNUtZXBBTURUMXgsZdAJNUV0NHUIAAlQ=","queueTime":0,"applicationTime":804,"atts":"HhRUQwNDTx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
